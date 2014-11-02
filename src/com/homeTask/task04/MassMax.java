@@ -19,7 +19,7 @@ public class MassMax {
         }
         int max = b[0];
         int ind = 0;
-        System.out.println("модуль произведения элементов строк:");
+        System.out.println("модуль  произведения элементов строк:");
         for (int i = 0; i < b.length; i++){
             System.out.print(b[i] + " ");
             if (max < b[i]){
