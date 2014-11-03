@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class MassMax {
     public static void main(String[] args) {
-
         int[][] a = new int [7][4];
         int[] b = new int [7];
         for (int i = 0; i < a.length; i++) {
@@ -29,6 +28,5 @@ public class MassMax {
         }
         System.out.println();
         System.out.println("максимальное произведение " + max + " в строке с индексом " + ind);
-
     }
 }
