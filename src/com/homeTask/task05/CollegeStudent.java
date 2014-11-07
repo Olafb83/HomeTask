@@ -20,6 +20,6 @@ public class CollegeStudent extends Student {
         return major;
     }
     public String toString() {
-        return super.toString() + "year " + year + "major " + major;
+        return super.toString() + " year: " + year + " major: " + major;
     }
 }

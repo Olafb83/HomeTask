@@ -34,7 +34,8 @@ public class Person {
     void setGender(String g) {
         gender = g;
     }
-    // public String toString(){
-    //    return super.toString() + name + age + gender;
+    public String toString() {
+        return " name: " + name + " Age: " + age + " gender: " + gender;
+    }
 }
 

@@ -36,10 +36,8 @@ public class Test {
         people[3].setName("Coach Bob");
         people[3].setAge(27);
         people[3].setGender("M");
-
-
         for (Person p : people){
-            System.out.println(p.getName() + " " + p.getAge() + " " + p.getGender());
+            System.out.println(p.toString());
         }
     }
 }

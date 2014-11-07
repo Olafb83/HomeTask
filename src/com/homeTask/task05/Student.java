@@ -19,8 +19,8 @@ public class Student extends Person {
     double getGpa(){
         return gpa;
     }
-    public String toString(){
-        return super.toString() + "idNumber " + idNumber + "gpa" + gpa;
+    public String toString() {
+        return super.toString() + " idNumber: " + idNumber + " gpa: " + gpa;
 
     }
 }
