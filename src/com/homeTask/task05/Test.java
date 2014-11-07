@@ -33,7 +33,10 @@ public class Test {
         second.setGpa(4.0);
         second.setYear(1);
         second.setMajor("English");
-        
+        people[3].setName("Coach Bob");
+        people[3].setAge(27);
+        people[3].setGender("M");
+
 
         for (Person p : people){
             System.out.println(p.getName() + " " + p.getAge() + " " + p.getGender());
