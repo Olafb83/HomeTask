@@ -3,6 +3,7 @@ package com.homeTask.task05;
 public class Student extends Person {
     double gpa;
     String idNumber;
+    Student(){}
     Student (String n, int a, String g, String id, double gp){
         super (n, a, g);
     }

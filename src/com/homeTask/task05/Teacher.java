@@ -3,6 +3,7 @@ package com.homeTask.task05;
 public class Teacher extends Person {
     double salary;
     String subject;
+    Teacher(){}
     Teacher (String n, int a, String g, double s, String sub){
         super (n, a, g);
     }
