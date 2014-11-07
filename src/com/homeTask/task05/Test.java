@@ -21,6 +21,20 @@ public class Test {
         mat.setGender("M");
         mat.setSalary(50000);
         mat.setSubject("Computer Science");
+        first.setName("Lunne Brooke");
+        first.setAge(16);
+        first.setGender("F");
+        first.setIdNumber("HS95129");
+        first.setGpa(3.5);
+        second.setName("Ima Frosh");
+        second.setAge(18);
+        second.setGender("F");
+        second.setIdNumber("UCB123");
+        second.setGpa(4.0);
+        second.setYear(1);
+        second.setMajor("English");
+        
+
         for (Person p : people){
             System.out.println(p.getName() + " " + p.getAge() + " " + p.getGender());
         }
