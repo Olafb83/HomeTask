@@ -6,9 +6,9 @@ public class Person {
     String gender;
 
     Person (String n, int a, String g){
-       // name = n;
-       // age = a;
-       // gender = g;
+        // name = n;
+        // age = a;
+        // gender = g;
     }
     String getName() {
         return name;
@@ -33,4 +33,7 @@ public class Person {
     void setGender(String g) {
         gender = g;
     }
+    // public String toString(){
+    //    return super.toString() + name + age + gender;
 }
+

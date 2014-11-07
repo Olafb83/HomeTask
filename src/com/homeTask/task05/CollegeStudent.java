@@ -18,4 +18,7 @@ public class CollegeStudent extends Student {
     String getMajor(){
         return major;
     }
+    public String toString() {
+        return super.toString() + "year " + year + "major " + major;
+    }
 }

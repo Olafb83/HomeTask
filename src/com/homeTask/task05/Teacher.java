@@ -17,5 +17,7 @@ public class Teacher extends Person {
     }
     String getSubject(){
         return subject;
+
+
     }
 }
