@@ -2,9 +2,11 @@ package com.homeTask.task06;
 
 import com.sourceit.hometask.basic.FractionNumber;
 
-public class FracNumb implements FractionNumber, Comparable{
+public class FracNumb implements FractionNumber {
     int dividend;
     int divisor;
+
+    public FracNumb() {}
 
     public FracNumb(int dividend, int divisor) {
         this.dividend = dividend;
@@ -33,7 +35,7 @@ public class FracNumb implements FractionNumber, Comparable{
 
     @Override
     public double doubleValue() {
-        return 0;
+        return 1.0 * dividend / divisor;
     }
 
     @Override
