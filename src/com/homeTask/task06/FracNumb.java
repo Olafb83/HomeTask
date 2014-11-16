@@ -35,11 +35,16 @@ public class FracNumb implements FractionNumber {
 
     @Override
     public double doubleValue() {
-        return 1.0 * dividend / divisor;
+        return (double) dividend / divisor;
     }
 
     @Override
     public int compareTo(FractionNumber o) {
-        return 0;
+        return Double.valueOf(this.doubleValue()).compareTo(Double.valueOf(o.doubleValue()));
+    }
+
+    @Override
+    public String toString() {
+        return getDividend() + "/" + getDivisor();
     }
 }
