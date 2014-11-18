@@ -40,7 +40,7 @@ public class FracNumb implements FractionNumber {
 
     @Override
     public int compareTo(FractionNumber o) {
-        return Double.valueOf(this.doubleValue()).compareTo(Double.valueOf(o.doubleValue()));
+        return Double.compare(doubleValue(), o.doubleValue());
     }
 
     @Override
