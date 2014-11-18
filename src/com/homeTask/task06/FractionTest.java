@@ -2,6 +2,7 @@ package com.homeTask.task06;
 
 import com.sourceit.hometask.basic.FractionNumber;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -35,7 +36,10 @@ public class FractionTest {
         for (int i = 0; i < ARRAY_SIZE; i++) {
             a[i] = new FracNumb(m.nextInt(10), m.nextInt(10) + 1);
         }
-
+        Arrays.sort(a);
+        for (FractionNumber i : a) {
+            System.out.println(i);
+        }
         //FractionNumber c2 = FracNumbOp.add2(d1, d2);
         //System.out.println(c2.doubleValue());
     }
