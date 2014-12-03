@@ -13,11 +13,12 @@ public class TestClass {
 
         FactoryClass fc = new FactoryClass();
         try {
-            fc.createSimpleCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file.txt");
-            fc.createSimpleCopyFileStrategy().copyFile(new File("src/Resorses/file.txt"), new File ("src/Resorses/file.txt"));
-            fc.createBufferedCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file.txt");
-            fc.createBufferedCopyFileStrategy().copyFile(new File("src/Resorses/file.txt"), new File ("src/Resorses/file.txt"));
-            // fc.createChannelsCopyFileStrategy().copyFile('','');
+            fc.createChannelsCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file1.txt");
+            //fc.createSimpleCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file1.txt");
+            //fc.createSimpleCopyFileStrategy().copyFile(new File("src/Resorses/file.txt"), new File ("src/Resorses/file.txt"));
+            //fc.createBufferedCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file.txt");
+            //fc.createBufferedCopyFileStrategy().copyFile(new File("src/Resorses/file.txt"), new File ("src/Resorses/file.txt"));
+            //fc.createChannelsCopyFileStrategy().copyFile('','');
         }catch (FileAlreadyPresentsException ex){
             ex.printStackTrace();
         }catch (FileCopyFailedException ex){
