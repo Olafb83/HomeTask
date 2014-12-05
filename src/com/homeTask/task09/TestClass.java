@@ -12,13 +12,16 @@ public class TestClass {
     public static void main(String[] args) {
 
         FactoryClass fc = new FactoryClass();
+        //copy file ~ 35mb
         try {
-            fc.createChannelsCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file1.txt");
-            //fc.createSimpleCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file1.txt");
-            //fc.createSimpleCopyFileStrategy().copyFile(new File("src/Resorses/file.txt"), new File ("src/Resorses/file.txt"));
-            //fc.createBufferedCopyFileStrategy().copyFile("src/Resorses/file.txt", "src/Resorses/file.txt");
-            //fc.createBufferedCopyFileStrategy().copyFile(new File("src/Resorses/file.txt"), new File ("src/Resorses/file.txt"));
-            //fc.createChannelsCopyFileStrategy().copyFile('','');
+            fc.createChannelsCopyFileStrategy().copyFile("src/Resorses/file.3gp", "src/Resorses/file1.3gp");
+            // 451 msec
+            //fc.createSimpleCopyFileStrategy().copyFile("src/Resorses/file.3gp", "src/Resorses/file1.3gp");
+            // to much time...
+            fc.createBufferedCopyFileStrategy().copyFile("src/Resorses/file.3gp", "src/Resorses/file1.3gp");
+            //2130 msec
+            fc.createFilesCopyFileStrategy().copyFile("src/Resorses/file.3gp", "src/Resorses/ff.3gp");
+            //77  msec... if file is exists - throw exception??
         }catch (FileAlreadyPresentsException ex){
             ex.printStackTrace();
         }catch (FileCopyFailedException ex){

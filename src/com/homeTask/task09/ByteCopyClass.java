@@ -12,26 +12,21 @@ import java.io.*;
 public class ByteCopyClass implements CopyFileStrategy {
     @Override
     public void copyFile(String s, String s1) throws FileAlreadyPresentsException, FileCopyFailedException {
-        // String inFileStr = "src/Resorses/file.txt";
-        //String outFileStr = "src/Resorses/file1.txt";
-        int byteRead;
-        try (InputStream in = new FileInputStream(s); OutputStream out = new FileOutputStream(s1)) {
-            while ((byteRead = in.read()) != -1) {
-                out.write(byteRead);
-            }
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        copyFile(new File(s), new File(s1));
+
     }
     @Override
     public void copyFile(File file, File file1)throws FileAlreadyPresentsException, FileCopyFailedException {
         int byteRead;
+        long startTime;
+        long elapsedTime;
         try (InputStream in = new FileInputStream(file); OutputStream out = new FileOutputStream(file1)) {
+            startTime = System.nanoTime();
             while ((byteRead = in.read()) != -1) {
                 out.write(byteRead);
             }
+            elapsedTime = System.nanoTime() - startTime;
+            System.out.println("Byte to Byte Copy Elapsed Time is " + (elapsedTime / 1000000.0) + " msec");
         } catch (FileNotFoundException ex) {
                 ex.printStackTrace();
         } catch (IOException ex) {

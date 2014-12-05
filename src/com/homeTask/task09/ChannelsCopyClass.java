@@ -12,22 +12,19 @@ import java.nio.channels.*;
 public class ChannelsCopyClass implements CopyFileStrategy {
     @Override
     public void copyFile(String s, String s1) throws FileAlreadyPresentsException, FileCopyFailedException {
-        try {
-            FileChannel fcin = new FileInputStream(s).getChannel();
-            FileChannel fcout = new FileOutputStream(s1).getChannel();
-            fcin.transferTo(0, fcin.size(), fcout);
-        }catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        copyFile(new File(s), new File(s1));
     }
     @Override
     public void copyFile(File file, File file1) throws FileAlreadyPresentsException, FileCopyFailedException {
+        long startTime;
+        long elapsedTime;
         try {
             FileChannel fcin = new FileInputStream(file).getChannel();
             FileChannel fcout = new FileOutputStream(file1).getChannel();
+            startTime = System.nanoTime();
             fcin.transferTo(0, fcin.size(), fcout);
+            elapsedTime = System.nanoTime() - startTime;
+            System.out.println("Channel Copy Elapsed Time is " + (elapsedTime / 1000000.0) + " msec");
         }catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }catch (IOException ex) {
