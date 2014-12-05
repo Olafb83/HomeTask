@@ -2,6 +2,8 @@ package com.homeTask.task08;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Olaf on 25.11.2014.
@@ -36,8 +38,22 @@ public class Test {
         System.out.println(list.sortedList(list.asList(str)));// Why duplicate??
 
         SetClass set = new SetClass();
-        //int[] a = new int[]{5, 7, 3, 5, 8, 1, 0, 4};
-        //set.customOrderSet(a);
 
+
+        Collection<Integer> collec = new ArrayList<>();
+        Set<String> sett = new HashSet<>();
+        collec.add(1);
+        collec.add(5);
+        collec.add(3);
+        collec.add(4);
+        collec.add(7);
+        collec.add(2);
+        sett.add("a");
+        sett.add("f");
+        sett.add("c");
+        sett.add("t");
+        sett.add("y");
+        sett.add("l");
+        System.out.println(set.orderedSet(collec, sett).toString());
     }
 }

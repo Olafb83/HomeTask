@@ -20,14 +20,13 @@ public class ListClass implements ListUtils{
 
     @Override
     public <T extends Comparable<T>> List<T> sortedList(List<T> list) throws IllegalArgumentException {
-        List<T> sList = new ArrayList<>();
-        Collections.sort(list, new Comparator<T>() {
+        List<T> sList = new ArrayList<>(list);
+        Collections.sort(sList, new Comparator<T>() {
             @Override
             public int compare(T o1, T o2) {
                 return o1.compareTo(o2);
             }
         });
-        list.addAll(list);
-        return list;
+        return sList;
     }
 }

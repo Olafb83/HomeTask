@@ -26,8 +26,9 @@ public class CollectionClass implements CollectionUtils {
     public Collection<Integer> difference(Collection<Integer> collection, Collection<Integer> collection1)
             throws NullPointerException {
         if (collection == null || collection1 == null) throw  new NullPointerException();
-        return null;
-        // I do not understand a task... I must use randomize?
+
+        return ;
+
     }
 
     @Override
@@ -44,8 +45,7 @@ public class CollectionClass implements CollectionUtils {
     public Set<Integer> unionWithoutDuplicates(Collection<Integer> collection, Collection<Integer> collection1)
             throws NullPointerException {
         if (collection == null || collection1 == null) throw  new NullPointerException();
-        Set<Integer> unOutColl = new HashSet<>();
-        unOutColl.addAll(collection);
+        Set<Integer> unOutColl = new HashSet<>(collection);
         unOutColl.addAll(collection1);
         return unOutColl;
     }
