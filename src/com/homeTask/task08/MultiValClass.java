@@ -83,7 +83,7 @@ public class MultiValClass<H,V> implements MultiValueMap<H,V> {
     }
 
     @Override
-    public Collection values() {
+    public Collection values () {
         return null;
     }
 
