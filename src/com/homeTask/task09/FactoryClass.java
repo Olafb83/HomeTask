@@ -112,7 +112,7 @@ public class FactoryClass implements CopyFileFactory {
                 copyFile(new File(s), new File(s1));
             }
             @Override
-            public void copyFile(File file, File file1) throws FileAlreadyPresentsException, FileCopyFailedException {
+            public void  copyFile(File file, File file1) throws FileAlreadyPresentsException, FileCopyFailedException {
                 long startTime;
                 long elapsedTime;
                 try {
