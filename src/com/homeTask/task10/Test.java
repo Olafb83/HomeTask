@@ -1,10 +1,8 @@
 package com.homeTask.task10;
 
 
-import com.homeTask.task09.BufferCopyClass;
-import com.homeTask.task09.ByteCopyClass;
-import com.homeTask.task09.ChannelsCopyClass;
-import com.homeTask.task09.NewCopyClass;
+
+import com.homeTask.task09.FactoryClass;
 import com.sourceit.hometask.threads.*;
 
 /**
@@ -12,8 +10,9 @@ import com.sourceit.hometask.threads.*;
  */
 public class Test {
     public static void main(String[] args) {
-
+        FactoryClass fc = new FactoryClass();
         CopyFileTask ct1 = new CopyFileClass();
+        fc.createChannelsCopyFileStrategy();
         ct1.setFileCopyUtils(new BufferCopyClass());
         ct1.setSourceFilePath('');
         ct1.setDestinyFilePath('');

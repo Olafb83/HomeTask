@@ -30,7 +30,7 @@ public class CopyFileClass implements CopyFileTask {
     }
 
     @Override
-    public int getTryCount() {
+    public int getTryCount()  {
         return tryCount;
     }
 

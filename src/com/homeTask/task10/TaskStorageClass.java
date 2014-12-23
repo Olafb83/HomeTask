@@ -24,7 +24,7 @@ public class TaskStorageClass implements TasksStorage{
         if (count() == 0) return null;
         //Task t = tasks.get(0);
         //if (t == null)
-        //    return null;
+        //return null;
         return tasks.remove(0);
     }
 
